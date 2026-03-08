@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Uninstall SharkDeck
-Comment=Remove SharkDeck and CheatBoard from your Steam Deck
-Exec=konsole --hold -e bash -c 'echo "Uninstalling SharkDeck..." && systemctl --user stop sharkdeck 2>/dev/null && systemctl --user disable sharkdeck 2>/dev/null && rm -f ~/.local/bin/sharkdeck-daemon ~/.local/bin/sharkdeck-launcher ~/.local/bin/cheatboard-launcher && rm -f ~/.config/systemd/user/sharkdeck.service && rm -rf ~/.config/sharkdeck ~/.config/sharkdeck-chrome ~/.config/cheatboard-chrome && rm -rf ~/.local/share/sharkdeck && rm -f ~/.local/share/applications/sharkdeck.desktop ~/.local/share/applications/cheatboard.desktop && systemctl --user daemon-reload && echo "" && echo "SharkDeck has been removed." && echo "Restart Steam to remove it from your library."'
+Comment=Remove SharkDeck from your Steam Deck
+Exec=konsole --hold -e bash -c 'echo "Uninstalling SharkDeck..." && systemctl --user stop sharkdeck 2>/dev/null && systemctl --user disable sharkdeck 2>/dev/null && rm -f ~/.local/bin/sharkdeck-daemon ~/.local/bin/sharkdeck-launcher && rm -f ~/.config/systemd/user/sharkdeck.service && rm -rf ~/.config/sharkdeck ~/.config/sharkdeck-chrome && rm -rf ~/.local/share/sharkdeck && rm -f ~/.local/share/applications/sharkdeck.desktop && systemctl --user daemon-reload && echo "" && echo "SharkDeck has been removed." && echo "Restart Steam to remove it from your library."'
 Icon=application-x-executable
 Type=Application
 Terminal=false
