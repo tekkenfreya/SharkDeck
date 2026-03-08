@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">SharkDeck</h1>
-<p align="center"><strong>Game trainers on Steam Deck — no terminal required.</strong></p>
+<p align="center"><strong>Game trainers on Steam Deck, no terminal required.</strong></p>
 
 <p align="center">
   <a href="https://github.com/tekkenfreya/SharkDeck/releases/latest/download/SharkDeck.zip">
