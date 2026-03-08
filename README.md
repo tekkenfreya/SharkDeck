@@ -2,7 +2,6 @@
   <img src="ui/sharkdeck-logo.png" width="280" alt="SharkDeck Logo">
 </p>
 
-<h1 align="center">SharkDeck</h1>
 <p align="center"><strong>Game trainers on Steam Deck, no terminal required.</strong></p>
 
 <p align="center">
