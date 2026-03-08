@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Install SharkDeck
+Comment=Install SharkDeck on your Steam Deck
+Path=/home/deck/Downloads/sharkdeck-install
+Exec=konsole --hold -e bash /home/deck/Downloads/sharkdeck-install/install.sh
+Icon=application-x-executable
+Type=Application
+Terminal=false
