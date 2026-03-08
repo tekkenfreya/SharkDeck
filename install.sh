@@ -389,7 +389,7 @@ cat > ~/.local/share/applications/cheatboard.desktop << EOF
 Name=CheatBoard
 Comment=Keyboard overlay for trainer hotkeys
 Exec=$HOME/.local/bin/cheatboard-launcher
-Icon=$HOME/.local/share/sharkdeck/launcher/ui/sharkdeck-logo.png
+Icon=$HOME/.local/share/sharkdeck/launcher/ui/cheatboard-icon.png
 Type=Application
 Categories=Game;
 Terminal=false
@@ -398,8 +398,9 @@ EOF
 # --- Add CheatBoard to Steam library ---
 info "Adding CheatBoard to Steam library..."
 CB_EXE="$HOME/.local/bin/cheatboard-launcher"
+CB_LOGO="$HOME/.local/share/sharkdeck/launcher/ui/cheatboard-icon.png"
 
-if command -v python3 &>/dev/null && [[ -f "$LOGO" ]]; then
+if command -v python3 &>/dev/null && [[ -f "$CB_LOGO" ]]; then
     for USERDATA in "$HOME/.local/share/Steam/userdata"/*/; do
         [[ -d "$USERDATA" ]] || continue
 
@@ -410,7 +411,7 @@ home = os.path.expanduser("~")
 userdata = os.environ.get("USERDATA_DIR", "")
 vdf_path = os.path.join(userdata, "config", "shortcuts.vdf")
 exe_path = os.path.join(home, ".local", "bin", "cheatboard-launcher")
-icon_path = os.path.join(home, ".local", "share", "sharkdeck", "launcher", "ui", "sharkdeck-logo.png")
+icon_path = os.path.join(home, ".local", "share", "sharkdeck", "launcher", "ui", "cheatboard-icon.png")
 app_name = "CheatBoard"
 
 def find_appid_by_name(data, name):
@@ -500,11 +501,11 @@ PYEOF
         if [[ -n "$CB_SHORTCUT_ID" ]]; then
             GRID_DIR="${USERDATA}config/grid"
             mkdir -p "$GRID_DIR"
-            cp "$LOGO" "$GRID_DIR/${CB_SHORTCUT_ID}p.png" 2>/dev/null || true
-            cp "$LOGO" "$GRID_DIR/${CB_SHORTCUT_ID}.png" 2>/dev/null || true
-            cp "$LOGO" "$GRID_DIR/${CB_SHORTCUT_ID}_hero.png" 2>/dev/null || true
-            cp "$LOGO" "$GRID_DIR/${CB_SHORTCUT_ID}_logo.png" 2>/dev/null || true
-            cp "$LOGO" "$GRID_DIR/${CB_SHORTCUT_ID}_icon.png" 2>/dev/null || true
+            cp "$CB_LOGO" "$GRID_DIR/${CB_SHORTCUT_ID}p.png" 2>/dev/null || true
+            cp "$CB_LOGO" "$GRID_DIR/${CB_SHORTCUT_ID}.png" 2>/dev/null || true
+            cp "$CB_LOGO" "$GRID_DIR/${CB_SHORTCUT_ID}_hero.png" 2>/dev/null || true
+            cp "$CB_LOGO" "$GRID_DIR/${CB_SHORTCUT_ID}_logo.png" 2>/dev/null || true
+            cp "$CB_LOGO" "$GRID_DIR/${CB_SHORTCUT_ID}_icon.png" 2>/dev/null || true
             ok "CheatBoard added to Steam (appid=$CB_SHORTCUT_ID) with artwork"
         else
             warn "Could not add CheatBoard to Steam library"
