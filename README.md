@@ -5,7 +5,7 @@
 <p align="center"><strong>Game trainers on Steam Deck, no terminal required.</strong></p>
 
 <p align="center">
-  <a href="https://github.com/tekkenfreya/SharkDeck/releases/download/1.0.0/sharkdeck-install.zip">
+  <a href="https://github.com/tekkenfreya/SharkDeck/releases/download/1.0.1/sharkdeck-install.zip">
     <img src="https://img.shields.io/badge/Download-SharkDeck-1a5fa8?style=for-the-badge&logo=steam&logoColor=white" alt="Download SharkDeck">
   </a>
 </p>
