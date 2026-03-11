@@ -203,7 +203,7 @@ cat > ~/.config/sharkdeck-chrome/'Local State' << 'STATEEOF'
 STATEEOF
 
 # --- Create launcher script (Chrome --app mode) ---
-cat > ~/.local/bin/sharkdeck-launcher << 'EOF'
+cat > ~/.local/bin/sharkdeck-launcher << EOF
 #!/bin/bash
 # SharkDeck Launcher — opens the UI in Chrome app mode
 # Flags explained:
@@ -211,9 +211,9 @@ cat > ~/.local/bin/sharkdeck-launcher << 'EOF'
 #   --force-device-scale-factor=1   Prevent DPI scaling that causes zoom glitches
 #   --ozone-platform=x11     Force X11 backend (Gamescope provides Xwayland)
 #   --disable-gpu-compositing Prevent Chrome's own compositor fighting Gamescope
-exec flatpak run com.google.Chrome \
+exec flatpak run --device=all com.google.Chrome \
   --app=http://127.0.0.1:7331/ui/ \
-  --user-data-dir=/home/deck/.config/sharkdeck-chrome \
+  --user-data-dir=$HOME/.config/sharkdeck-chrome \
   --class=sharkdeck \
   --window-size=1280,800 \
   --force-device-scale-factor=1 \
